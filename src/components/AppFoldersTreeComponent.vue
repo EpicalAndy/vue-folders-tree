@@ -11,8 +11,7 @@
 <script setup lang="ts">
 import AppFolderComponent from "@/components/AppFolderComponent.vue";
 
-
-const props = defineProps([ 'folders' ]);
+const { folders } = defineProps([ 'folders' ]);
 
 </script>
 

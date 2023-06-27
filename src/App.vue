@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import AppHomveView from "@/views/AppHomveView.vue";
 
 const title: string = 'Директории'

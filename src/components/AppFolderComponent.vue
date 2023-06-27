@@ -23,7 +23,7 @@ import { useStore } from "@/stores/store";
 const store = useStore();
 const { folder } = defineProps<{ folder: Folder }>();
 const isOpened = ref(false);
-const isActive = computed(() => store.activeFolder === folder.id);
+const isActive = computed(() => store.activeFolderId === folder.id);
 const children = store.getChildren(folder.id);
 
 const icon = computed(() => isOpened.value ? 'mdi-folder-open' : 'mdi-folder');

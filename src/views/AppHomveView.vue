@@ -6,7 +6,11 @@
       </v-card-text>
     </v-card-item>
 
-    <app-button-component @click="toggle">Открыть дерево</app-button-component>
+    <app-button-component block
+                          @click="toggle">
+      Открыть дерево
+    </app-button-component>
+
   </v-card>
   <v-dialog v-model="show">
     <v-card>
@@ -19,8 +23,8 @@
       </app-folders-tree-component>
 
       <v-btn-group>
-        <app-button-component>ок</app-button-component>
-        <app-button-component>Закрыть</app-button-component>
+        <app-button-component @click="select">Ок</app-button-component>
+        <app-button-component @click="toggle">Закрыть</app-button-component>
       </v-btn-group>
 
     </v-card>
@@ -37,9 +41,15 @@ const show = ref(false);
 const props = defineProps([ 'title' ]);
 const store = useStore();
 const folders = ref(store.getChildren(null));
+const emits = defineEmits([ 'select' ])
 
 function toggle() {
   show.value = !show.value;
+}
+
+function select() {
+  emits("select", store.activeFolderId);
+  show.value = false;
 }
 </script>
 
