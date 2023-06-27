@@ -2,7 +2,7 @@
   <v-card>
     <v-card-item>
       <v-card-text>
-        Путь к папке: {{ store.fullFolderPath }}
+        Путь к папке: {{ fullFolderPath }}
       </v-card-text>
     </v-card-item>
 
@@ -41,7 +41,8 @@ const show = ref(false);
 const props = defineProps([ 'title' ]);
 const store = useStore();
 const folders = ref(store.getChildren(null));
-const emits = defineEmits([ 'select' ])
+const emits = defineEmits([ 'select' ]);
+const fullFolderPath = ref('/');
 
 function toggle() {
   show.value = !show.value;
@@ -49,6 +50,8 @@ function toggle() {
 
 function select() {
   emits("select", store.activeFolderId);
+
+  fullFolderPath.value = store.fullFolderPath;
   show.value = false;
 }
 </script>

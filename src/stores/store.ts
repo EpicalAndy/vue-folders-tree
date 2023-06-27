@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { computed, type Ref, ref } from "vue";
 import foldersSrc from "@/demo/folders2.json";
-import { Folder } from "@/models/folder";
+import type { Folder } from "@/models/folder";
 
 export const useStore = defineStore('store', () => {
 
