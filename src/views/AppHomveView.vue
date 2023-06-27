@@ -1,6 +1,13 @@
 <template>
-  <app-button-component @click="toggle">Открыть диалог</app-button-component>
+  <v-card>
+    <v-card-item>
+      <v-card-text>
+        Путь к папке: {{ store.fullFolderPath }}
+      </v-card-text>
+    </v-card-item>
 
+    <app-button-component @click="toggle">Открыть дерево</app-button-component>
+  </v-card>
   <v-dialog v-model="show">
     <v-card>
 
@@ -29,7 +36,7 @@ import { useStore } from "@/stores/store";
 const show = ref(false);
 const props = defineProps([ 'title' ]);
 const store = useStore();
-const folders = ref(store.folders);
+const folders = ref(store.getChildren(null));
 
 function toggle() {
   show.value = !show.value;

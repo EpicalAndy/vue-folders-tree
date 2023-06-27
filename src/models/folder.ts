@@ -1,5 +1,5 @@
 export interface Folder {
   id: number,
   name: string
-  children: Folder[] | null
+  parentId: number | null
 }

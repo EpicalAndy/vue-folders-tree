@@ -8,7 +8,7 @@
       {{ folder.name }}
     </v-btn>
     <app-folders-tree-component v-if="isOpened"
-        :folders="folder.children">
+        :folders="children">
     </app-folders-tree-component>
   </v-card>
 
@@ -24,11 +24,11 @@ const store = useStore();
 const { folder } = defineProps<{ folder: Folder }>();
 const isOpened = ref(false);
 const isActive = computed(() => store.activeFolder === folder.id);
-
+const children = store.getChildren(folder.id);
 
 const icon = computed(() => isOpened.value ? 'mdi-folder-open' : 'mdi-folder');
 const folderColor = computed(() => {
-  let color = folder.children ? 'light-blue' : 'grey-darken-1';
+  let color = store.getChildren(folder.id).length ? 'light-blue' : 'grey-darken-1';
 
   isActive.value && (color = 'green');
 
