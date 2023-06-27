@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "folder 1",
+    "children": [
+      {
+        "id": 2,
+        "name": "folder 2",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "folder 3",
+    "children": null
+  },
+  {
+    "id": 4,
+    "name": "folder 4",
+    "children": [
+      {
+        "id": 5,
+        "name": "folder 5",
+        "children": null
+      },
+      {
+        "id": 6,
+        "name": "folder 6",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "folder 7",
+    "children": [
+      {
+        "id": 8,
+        "name": "folder 8",
+        "children": [
+          {
+            "id": 9,
+            "name": "folder 8",
+            "children": [
+              {
+                "id": 10,
+                "name": "folder 10",
+                "children": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "folder 11",
+        "children": null
+      },
+      {
+        "id": 12,
+        "name": "folder 12",
+        "children": [
+          {
+            "id": 13,
+            "name": "folder 13",
+            "children": [
+              {
+                "id": 14,
+                "name": "folder 14",
+                "children": null
+              },
+              {
+                "id": 15,
+                "name": "folder 15",
+                "children": [
+                  {
+                    "id": 16,
+                    "name": "folder 16",
+                    "children": [
+                      {
+                        "id": 17,
+                        "name": "folder 17",
+                        "children": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 18,
+                "name": "folder 18",
+                "children": [
+                  {
+                    "id": 19,
+                    "name": "folder 19",
+                    "children": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
