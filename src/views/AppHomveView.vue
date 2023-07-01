@@ -22,6 +22,8 @@
       <app-folders-tree-component :folders="folders">
       </app-folders-tree-component>
 
+      <app-legend-component></app-legend-component>
+
       <v-btn-group>
         <app-button-component @click="select">Ок</app-button-component>
         <app-button-component @click="toggle">Закрыть</app-button-component>
@@ -36,6 +38,7 @@ import AppButtonComponent from "@/components/UI/AppButtonComponent.vue";
 import { ref } from "vue";
 import AppFoldersTreeComponent from "@/components/AppFoldersTreeComponent.vue";
 import { useStore } from "@/stores/store";
+import AppLegendComponent from "@/components/AppLegendComponent.vue";
 
 const show = ref(false);
 const props = defineProps([ 'title' ]);
